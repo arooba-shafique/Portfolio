@@ -10,33 +10,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const href = a.getAttribute('href');
-      if (href.length > 1 && document.querySelector(href)) {
+  a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if (href.length > 1) {
+      const target = document.querySelector(href);
+      if (target) {
         e.preventDefault();
-        document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' });
-        navList && navList.classList.remove('show'); 
-      }
-    });
-  });
 
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav ul li a");
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      if (scrollY >= sectionTop) {
-        current = section.getAttribute("id");
+        if (window.innerWidth > 880) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          const header = document.querySelector("header");
+          const headerHeight = header ? header.offsetHeight : 0;
+          const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - headerHeight - 20;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+        navList && navList.classList.remove("show");
       }
-    });
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === "#" + current) {
-        link.classList.add("active");
-      }
-    });
+    }
   });
+});
+
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -112,3 +111,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
