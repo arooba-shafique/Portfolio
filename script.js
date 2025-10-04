@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
   const menuBtn = document.getElementById('menuBtn');
   const navList = document.getElementById('navList');
   if (menuBtn && navList) {
@@ -10,33 +11,33 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const href = a.getAttribute('href');
-    if (href.length > 1) {
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (href.length > 1) {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
 
-        if (window.innerWidth > 880) {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else {
-          const header = document.querySelector("header");
-          const headerHeight = header ? header.offsetHeight : 0;
-          const elementPosition = target.getBoundingClientRect().top + window.scrollY;
-          const offsetPosition = elementPosition - headerHeight - 20;
+          if (window.innerWidth > 880) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          } else {
+            const header = document.querySelector("header");
+            const headerHeight = header ? header.offsetHeight : 0;
+            const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - headerHeight - 20;
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+            });
+          }
+          navList && navList.classList.remove("show");
         }
-        navList && navList.classList.remove("show");
       }
-    }
+    });
   });
-});
 
-
+  const sections = document.querySelectorAll("section"); 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, { threshold: 0.2 });
+
   sections.forEach(section => observer.observe(section));
 
   document.querySelectorAll(".project-card").forEach(card => {
@@ -86,10 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
       lightbox.style.display = 'flex';
     }
   };
+
   window.closeProjectLightbox = function() {
     const lightbox = document.getElementById('projectLightbox');
     if (lightbox) lightbox.style.display = 'none';
   };
+
   window.openCert = function(src) {
     const lightbox = document.getElementById('certLightbox');
     const img = document.getElementById('certLightboxImg');
@@ -98,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
       lightbox.style.display = 'flex';
     }
   };
+
   window.closeCertLightbox = function() {
     const lightbox = document.getElementById('certLightbox');
     if (lightbox) lightbox.style.display = 'none';
@@ -111,4 +116,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
