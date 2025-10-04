@@ -961,7 +961,6 @@ background:#071026;
   border-radius: 2px;
 }
 
-/* Show hamburger on small screens */
 @media screen and (max-width: 880px) {
   .hamburger {
     display: flex;
@@ -981,3 +980,19 @@ background:#071026;
     display: flex;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 881px) {
+  [id] {
+    scroll-margin-top: 40px; 
+  }
+}
+
+@media (max-width: 880px) {
+  [id] {
+    scroll-margin-top: 100px; 
+  }
+}
+
