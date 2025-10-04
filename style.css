@@ -995,4 +995,33 @@ html {
     scroll-margin-top: 100px; 
   }
 }
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column;   
+    align-items: center;      
+    text-align: center;
+  }
 
+  .contact-form-box,
+  .contact-socials {
+    width: 100%;
+    max-width: 450px; 
+  }
+
+  .contact-socials {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .contact-socials ul {
+    padding: 0;
+  }
+
+  .contact-socials li {
+    margin: 12px 0;
+  }
+
+  .contact-socials a {
+    justify-content: center; 
+  }
+}
