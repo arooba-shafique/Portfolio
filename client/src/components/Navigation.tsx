@@ -24,12 +24,16 @@ export function Navigation() {
   }, []);
 
   const handleNavClick = (href: string) => {
-    setIsOpen(false);
+  setIsOpen(false);
+
+  // Delay scrolling slightly to wait for mobile menu to collapse
+  setTimeout(() => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  };
+  }, 200); // 200ms matches your motion duration
+};
 
   return (
     <header
