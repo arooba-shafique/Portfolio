@@ -8,7 +8,7 @@ import urbanAuraImg from "@/assets/projects/urban-aura.png";
 import movieHubImg from "@/assets/projects/moviehub.png";
 import weatherImg from "@/assets/projects/weather.png";
 import coffeeHavenImg from "@/assets/projects/coffee-haven.png";
-
+import blogWebsiteImg from "@/assets/projects/blog_site.png";
 
 // Placeholder project data - user can update later
 const projects = [
@@ -43,7 +43,14 @@ image: weatherImg,  },
     tags: ["Flutter", "Dart", "Firebase", "GetX", "MVVM"],
     links: { github: "https://github.com/arooba-shafique/coffee-haven" },
     image: coffeeHavenImg,
-  }
+  },
+  {
+  title: "Personal Blog Website",
+  description: "Responsive blog website with category filtering, real-time search, pagination, and smooth animations.",
+  tags: ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
+  links: { github: "https://github.com/arooba-shafique/blog_website" },
+  image: blogWebsiteImg,
+}
 ];
 
 export function Projects() {
