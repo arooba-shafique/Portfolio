@@ -52,7 +52,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="pt-12 flex items-center justify-center gap-6"
           >
-            <SocialLink href="https://github.com" icon={<Github className="h-6 w-6" />} label="GitHub" />
+            <SocialLink href="https://github.com/arooba-shafique" icon={<Github className="h-6 w-6" />} label="GitHub" />
             <SocialLink href="https://www.linkedin.com/in/arooba-shafique/" icon={<Linkedin className="h-6 w-6" />} label="LinkedIn" />
             <SocialLink href="mailto:aroobas2004@gmail.com" icon={<Mail className="h-6 w-6" />} label="Email" />
           </motion.div>
