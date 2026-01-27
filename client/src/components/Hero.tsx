@@ -18,9 +18,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-secondary/50 border border-white/5 text-sm font-mono text-primary mb-6">
-              Available for new opportunities
-            </span>
+          
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight mb-6">
               Building digital <br />
               <span className="text-gradient">experiences</span> that matter.

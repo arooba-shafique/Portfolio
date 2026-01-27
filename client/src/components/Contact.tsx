@@ -49,8 +49,7 @@ export function Contact() {
               <div>
                 <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Let's Connect</h2>
                 <p className="text-muted-foreground text-lg">
-                  Have a project in mind or just want to say hi? I'm always open to discussing new opportunities and ideas.
-                </p>
+Let’s bring ideas to life! Feel free to reach out about projects or collaborations.               </p>
               </div>
 
               <div className="space-y-6">
@@ -66,17 +65,7 @@ export function Contact() {
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-primary/10 text-primary">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold">Location</h3>
-                    <p className="text-muted-foreground">
-                      Remote / Worldwide
-                    </p>
-                  </div>
-                </div>
+                
               </div>
 
               <div className="p-6 rounded-2xl bg-secondary/30 border border-white/5">

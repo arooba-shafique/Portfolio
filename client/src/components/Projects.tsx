@@ -3,30 +3,39 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ExternalLink, Github, Code2, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import talkifyImg from "@/assets/projects/talkify.png";
+import urbanAuraImg from "@/assets/projects/urban-aura.png";
+import movieHubImg from "@/assets/projects/moviehub.png";
+import weatherImg from "@/assets/projects/weather.png";
+
 
 // Placeholder project data - user can update later
 const projects = [
   {
-    title: "Movie Discovery Platform",
-    description: "A full-stack application for discovering movies, featuring search, filtering, and user favorites. Built with Django and TMDB API.",
-    tags: ["Django", "Python", "Tailwind CSS", "TMDB API"],
-    links: { demo: "#", github: "#" },
-    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&auto=format&fit=crop&q=60" // Unsplash: movie theater screen
+    title: "Talkify - Real-Time Chat App",
+    description: "Developed a full-stack real-time chat application with Django, WebSockets, Tailwind CSS, and JavaScript. Implemented one-to-one & group messaging, message editing/deletion, reactions and unread message tracking.",
+    tags: ["Django", "WebSockets", "Tailwind CSS", "JavaScript"],
+    links: { github: "https://github.com/arooba-shafique/talkify" },
+    image: talkifyImg,
   },
   {
-    title: "Weather Dashboard",
-    description: "Real-time weather tracking application with interactive maps and 5-day forecasts. Uses OpenWeatherMap API for data.",
-    tags: ["JavaScript", "API Integration", "CSS3", "HTML5"],
-    links: { demo: "#", github: "#" },
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&auto=format&fit=crop&q=60" // Unsplash: weather clouds
-  },
+    title: "Urban Aura - E-Commerce Website",
+    description: "Developed a scalable e-commerce platform with Django backend and Tailwind CSS for responsive, modern UI. Implemented product listing, categories, shopping cart, and checkout workflow for seamless user experience.",
+    tags: ["Python", "Django", "JavaScript", "SQLite", "Tailwind CSS"],
+    links: { github: "https://github.com/arooba-shafique/urban-aura-ecommerce" },
+image: urbanAuraImg,  },
   {
-    title: "E-Commerce Storefront",
-    description: "Responsive e-commerce interface with product catalog, cart functionality, and checkout flow simulation.",
-    tags: ["React", "TypeScript", "Tailwind", "State Management"],
-    links: { demo: "#", github: "#" },
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&auto=format&fit=crop&q=60" // Unsplash: shopping cart tech
-  }
+    title: "MovieHub - Django Movie Discovery Platform",
+    description: "Developed a Django-based movie discovery platform integrating TMDB API for dynamic movie data and posters. Implemented movie search, detailed movie views, user authentication, and responsive UI.",
+    tags: ["Django", "Python", "Tailwind CSS", "JavaScript", "TMDB API"],
+    links: { github: "https://github.com/arooba-shafique/MovieHub" },
+image: movieHubImg,  },
+  {
+    title: "Weather Dashboard - Real-Time Weather App",
+    description: "Developed a dynamic web app to fetch and display real-time weather and 5-day forecasts using Open WeatherMap API. Implemented city search, geolocation, and responsive UI.",
+    tags: ["JavaScript", "HTML", "CSS", "Tailwind CSS", "OpenWeatherMap API"],
+    links: {  github: "https://github.com/arooba-shafique/weather-dashboard" },
+image: weatherImg,  }
 ];
 
 export function Projects() {
@@ -50,12 +59,10 @@ export function Projects() {
         >
           <div className="text-center space-y-4 max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-display font-bold">Featured Projects</h2>
-            <p className="text-muted-foreground text-lg">
-              A selection of projects that showcase my technical skills and design capabilities.
-            </p>
+          
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} index={index} />
             ))}
@@ -90,11 +97,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               <Github className="h-5 w-5" />
             </a>
           </Button>
-          <Button size="icon" className="rounded-full h-10 w-10 shadow-lg bg-primary text-white hover:bg-primary/90" asChild>
-            <a href={project.links.demo} target="_blank" rel="noopener noreferrer" aria-label="View Demo">
-              <ExternalLink className="h-5 w-5" />
-            </a>
-          </Button>
+          
         </div>
       </div>
 
