@@ -20,7 +20,7 @@ const skillGroups = [
   {
     title: "Tools & IDEs",
     icon: <Terminal className="w-5 h-5" />,
-    skills: ["Git",  "PyCharm"],
+    skills: ["Git", "PyCharm", "Vercel", "Netlify"], // Added Vercel & Netlify here
   },
 ];
 
