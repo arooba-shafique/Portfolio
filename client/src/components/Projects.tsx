@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Talkify - Real-Time Chat App",
     description: "Developed a full-stack real-time chat application with Django, WebSockets, Tailwind CSS, and JavaScript. Implemented one-to-one & group messaging, message editing/deletion, reactions and unread message tracking.",
-    tags: ["Django", "WebSockets", "Tailwind CSS", "JavaScript"],
+    tags: ["Django", "WebSockets", "Tailwind CSS", "JavaScript", "SQLite"],
     links: { github: "https://github.com/arooba-shafique/talkify" },
     image: talkifyImg,
   },
