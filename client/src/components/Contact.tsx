@@ -8,6 +8,31 @@ import { Textarea } from "@/components/ui/textarea";
 export function Contact() {
   const { ref, controls, variants } = useScrollAnimation();
 
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        setSubmitted(true);
+        form.reset();
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-background to-secondary/20">
       <div className="container mx-auto px-4 md:px-6">
@@ -34,8 +59,8 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold">Email</h3>
-                    <a href="mailto:hello@arooba.dev" className="text-muted-foreground hover:text-primary transition-colors">
-                      hello@arooba.dev
+                    <a href="mailto:aroobas2004@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                      aroobas2004@gmail.com
                     </a>
                   </div>
                 </div>
@@ -66,49 +91,61 @@ export function Contact() {
             </div>
 
             <div className="glass-card p-8 rounded-3xl">
-              <form 
-                action="https://formspree.io/f/mgvnydab" 
-                method="POST"
-                className="space-y-6"
-              >
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium ml-1">Name</label>
-                  <Input 
-                    id="name" 
-                    name="name" 
-                    placeholder="Your name" 
-                    className="bg-background/50 border-white/10 focus:border-primary h-12 rounded-xl"
-                    required
-                  />
+              {submitted ? (
+                <div className="h-full flex flex-col items-center justify-center text-center space-y-4 py-12">
+                  <div className="p-4 rounded-full bg-primary/20 text-primary">
+                    <Send className="w-12 h-12" />
+                  </div>
+                  <h3 className="text-2xl font-bold">Message Submitted!</h3>
+                  <p className="text-muted-foreground">Thank you for reaching out. I'll get back to you soon.</p>
+                  <Button variant="outline" onClick={() => setSubmitted(false)}>Send another message</Button>
                 </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium ml-1">Email</label>
-                  <Input 
-                    id="email" 
-                    name="email" 
-                    type="email" 
-                    placeholder="hello@example.com" 
-                    className="bg-background/50 border-white/10 focus:border-primary h-12 rounded-xl"
-                    required
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium ml-1">Message</label>
-                  <Textarea 
-                    id="message" 
-                    name="message" 
-                    placeholder="Tell me about your project..." 
-                    className="bg-background/50 border-white/10 focus:border-primary min-h-[150px] rounded-xl resize-none"
-                    required
-                  />
-                </div>
+              ) : (
+                <form 
+                  action="https://formspree.io/f/mgvnydab" 
+                  method="POST"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium ml-1">Name</label>
+                    <Input 
+                      id="name" 
+                      name="name" 
+                      placeholder="Your name" 
+                      className="bg-background/50 border-white/10 focus:border-primary h-12 rounded-xl"
+                      required
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium ml-1">Email</label>
+                    <Input 
+                      id="email" 
+                      name="email" 
+                      type="email" 
+                      placeholder="hello@example.com" 
+                      className="bg-background/50 border-white/10 focus:border-primary h-12 rounded-xl"
+                      required
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-sm font-medium ml-1">Message</label>
+                    <Textarea 
+                      id="message" 
+                      name="message" 
+                      placeholder="Tell me about your project..." 
+                      className="bg-background/50 border-white/10 focus:border-primary min-h-[150px] rounded-xl resize-none"
+                      required
+                    />
+                  </div>
 
-                <Button type="submit" className="w-full h-12 text-lg rounded-xl bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25">
-                  Send Message <Send className="ml-2 h-4 w-4" />
-                </Button>
-              </form>
+                  <Button type="submit" className="w-full h-12 text-lg rounded-xl bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25">
+                    Send Message <Send className="ml-2 h-4 w-4" />
+                  </Button>
+                </form>
+              )}
             </div>
           </div>
         </motion.div>

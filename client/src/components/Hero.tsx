@@ -26,7 +26,7 @@ export function Hero() {
               <span className="text-gradient">experiences</span> that matter.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              I'm Arooba, a Full Stack Developer passionate about crafting clean, efficient, and user-centric web applications.
+              I'm Arooba Shafique, a Full Stack Developer passionate about crafting clean, efficient, and user-centric web applications.
             </p>
           </motion.div>
 
@@ -55,8 +55,8 @@ export function Hero() {
             className="pt-12 flex items-center justify-center gap-6"
           >
             <SocialLink href="https://github.com" icon={<Github className="h-6 w-6" />} label="GitHub" />
-            <SocialLink href="https://linkedin.com" icon={<Linkedin className="h-6 w-6" />} label="LinkedIn" />
-            <SocialLink href="mailto:hello@arooba.dev" icon={<Mail className="h-6 w-6" />} label="Email" />
+            <SocialLink href="https://www.linkedin.com/in/arooba-shafique/" icon={<Linkedin className="h-6 w-6" />} label="LinkedIn" />
+            <SocialLink href="mailto:aroobas2004@gmail.com" icon={<Mail className="h-6 w-6" />} label="Email" />
           </motion.div>
         </div>
       </div>

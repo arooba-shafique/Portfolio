@@ -9,9 +9,7 @@ const experiences = [
     period: "Sept 2025 - Oct 2025",
     location: "Remote",
     description: [
-      "Developed full-stack web applications, including a movie discovery platform and e-commerce sites, using Django, JavaScript, and Tailwind CSS.",
-      "Integrated TMDB API and implemented backend modules for data management, authentication, and user-specific features.",
-      "Designed and optimized responsive UI/UX flows to ensure seamless user experience across platforms."
+      "Developed full-stack web applications, including a movie discovery platform and e-commerce sites, using Django, JavaScript, and Tailwind CSS."
     ]
   },
   {
@@ -20,9 +18,7 @@ const experiences = [
     period: "Sep 2025 - Sep 2025",
     location: "Remote",
     description: [
-      "Designed and developed tech landing pages, personal blogs, weather dashboards, and contact forms using HTML, CSS, JavaScript, and Tailwind CSS.",
-      "Integrated APIs for dynamic content, including real-time weather dashboards.",
-      "Implemented modern, responsive layouts and interactive UI components to enhance user experience."
+      "Designed and developed tech landing pages, personal blogs, weather dashboards, and contact forms using HTML, CSS, JavaScript, and Tailwind CSS."
     ]
   },
   {
@@ -31,9 +27,7 @@ const experiences = [
     period: "Aug 2025 - Aug 2025",
     location: "Remote",
     description: [
-      "Designed and developed responsive landing pages, to-do apps, and portfolio websites using HTML5, CSS3, JavaScript and Tailwind CSS.",
-      "Implemented dynamic UI features, interactive components, and modern layouts to enhance user experience.",
-      "Collaborated on project planning and code reviews, ensuring clean, maintainable, and reusable code."
+      "Designed and developed responsive landing pages, to-do apps, and portfolio websites using HTML5, CSS3, JavaScript and Tailwind CSS."
     ]
   }
 ];

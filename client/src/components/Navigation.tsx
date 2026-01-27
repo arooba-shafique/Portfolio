@@ -39,7 +39,7 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/" className="text-2xl font-display font-bold tracking-tighter hover:opacity-80 transition-opacity">
-          Arooba<span className="text-primary">.dev</span>
+          Arooba Shafique
         </Link>
 
         {/* Desktop Nav */}
