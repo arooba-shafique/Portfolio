@@ -24,8 +24,7 @@ export function Hero() {
               <span className="text-gradient">experiences</span> that matter.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              I'm Arooba Shafique, a Full Stack Developer passionate about crafting clean, efficient, and user-centric web applications.
-            </p>
+I'm Arooba Shafique, a Full Stack Developer passionate about crafting clean, efficient, and user-centric web and mobile applications.            </p>
           </motion.div>
 
           <motion.div
