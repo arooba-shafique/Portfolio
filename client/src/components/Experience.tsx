@@ -15,7 +15,7 @@ const experiences = [
   {
     role: "Frontend Developer Intern",
     company: "Elevvo Pathways",
-    period: "Sep 2025 - Sep 2025",
+    period: "August 2025 - August 2025",
     location: "Remote",
     description: [
       "Designed and developed tech landing pages, personal blogs, weather dashboards, and contact forms using HTML, CSS, JavaScript, and Tailwind CSS."
@@ -24,7 +24,7 @@ const experiences = [
   {
     role: "Frontend Developer Intern",
     company: "Code Sentinel",
-    period: "Aug 2025 - Aug 2025",
+    period: "July 2025 - July 2025",
     location: "Remote",
     description: [
       "Designed and developed responsive landing pages, to-do apps, and portfolio websites using HTML5, CSS3, JavaScript and Tailwind CSS."
