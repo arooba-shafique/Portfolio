@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import talkifyImg from "@/assets/projects/talkify.png";
 import urbanAuraImg from "@/assets/projects/urban-aura.png";
 import movieHubImg from "@/assets/projects/moviehub.png";
-import weatherImg from "@/assets/projects/weather.png";
+
 import coffeeHavenImg from "@/assets/projects/coffee-haven.png";
 import blogWebsiteImg from "@/assets/projects/blog_site.png";
 import royalPainterImg from "@/assets/projects/royal-painter.png";
@@ -55,12 +55,6 @@ image: urbanAuraImg,  },
     tags: ["Django", "Python", "Tailwind CSS", "JavaScript", "TMDB API"],
     links: { github: "https://github.com/arooba-shafique/MovieHub" },
 image: movieHubImg,  },
-  {
-    title: "Weather Dashboard - Real-Time Weather App",
-    description: "Developed a dynamic web app to fetch and display real-time weather and 5-day forecasts using Open WeatherMap API. Implemented city search, geolocation, and responsive UI.",
-    tags: ["JavaScript", "HTML", "CSS", "Tailwind CSS", "OpenWeatherMap API"],
-    links: {  github: "https://github.com/arooba-shafique/weather-dashboard" },
-image: weatherImg,  },
   {
     title: "Coffee Haven - Coffee & Snack App",
     description: "Flutter and Firebase-powered coffee and snack app designed with MVVM architecture. Features real-time product browsing, favourites, order management, user profiles, and smooth onboarding with a mobile-friendly UI.",
