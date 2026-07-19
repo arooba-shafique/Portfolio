@@ -11,6 +11,7 @@ import coffeeHavenImg from "@/assets/projects/coffee-haven.png";
 import blogWebsiteImg from "@/assets/projects/blog_site.png";
 import royalPainterImg from "@/assets/projects/royal-painter.png";
 import ispManagementImg from "@/assets/projects/isp-management.png";
+import institutionMgmtImg from "@/assets/projects/institution-mgmt.png";
 
 // Placeholder project data - user can update later
 const projects = [
@@ -27,6 +28,13 @@ const projects = [
     tags: ["React", "TypeScript", "Express", "PostgreSQL", "Drizzle ORM", "Tailwind CSS"],
     links: { github: "https://github.com/arooba-shafique/isp-management", live: "https://isp-management-api-server.vercel.app" },
     image: ispManagementImg,
+  },
+  {
+    title: "Institution Management System",
+    description: "A Django-based school management system with role-based dashboards for admins, teachers, students, and parents. Features secure login, academic records management, and password reset functionality.",
+    tags: ["Django", "Python", "HTML", "CSS", "JavaScript", "SQLite"],
+    links: { github: "https://github.com/arooba-shafique/Project", live: "https://arooba.pythonanywhere.com/" },
+    image: institutionMgmtImg,
   },
   {
     title: "Talkify - Real-Time Chat App",
