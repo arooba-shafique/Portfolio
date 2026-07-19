@@ -9,9 +9,25 @@ import movieHubImg from "@/assets/projects/moviehub.png";
 import weatherImg from "@/assets/projects/weather.png";
 import coffeeHavenImg from "@/assets/projects/coffee-haven.png";
 import blogWebsiteImg from "@/assets/projects/blog_site.png";
+import royalPainterImg from "@/assets/projects/royal-painter.png";
+import ispManagementImg from "@/assets/projects/isp-management.png";
 
 // Placeholder project data - user can update later
 const projects = [
+  {
+    title: "Royal Paint Dubai - Client Project",
+    description: "Professional client project for a paint services business in Dubai. Built a responsive, modern website with service listings, theme preview, and mobile-friendly layout deployed with a custom domain.",
+    tags: ["HTML", "CSS", "JavaScript", "Vercel"],
+    links: { github: "https://github.com/arooba-shafique/paint-services", live: "https://royalpainterdubai.com/" },
+    image: royalPainterImg,
+  },
+  {
+    title: "NetLink ISP Management Portal",
+    description: "Full-stack ISP management system serving 200+ customers with separate admin and customer dashboards. Built with React, Express, PostgreSQL, and Drizzle ORM. Features include package management, subscription tracking, payment verification, and complaint handling.",
+    tags: ["React", "TypeScript", "Express", "PostgreSQL", "Drizzle ORM", "Tailwind CSS"],
+    links: { github: "https://github.com/arooba-shafique/isp-management", live: "https://isp-management-api-server.vercel.app" },
+    image: ispManagementImg,
+  },
   {
     title: "Talkify - Real-Time Chat App",
     description: "Developed a full-stack real-time chat application with Django, WebSockets, Tailwind CSS, and JavaScript. Implemented one-to-one & group messaging, message editing/deletion, reactions and unread message tracking.",
