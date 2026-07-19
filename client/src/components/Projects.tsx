@@ -32,7 +32,7 @@ const projects = [
     tags: ["React", "TypeScript", "Express", "PostgreSQL", "Drizzle ORM", "Tailwind CSS"],
     links: { github: "https://github.com/arooba-shafique/isp-management", live: "https://isp-management-api-server.vercel.app" },
     image: ispManagementImg,
-    category: "Full Stack",
+    category: "Client",
     featured: true,
   },
   {
@@ -68,7 +68,7 @@ const projects = [
     tags: ["Django", "Python", "Tailwind CSS", "JavaScript", "TMDB API"],
     links: { github: "https://github.com/arooba-shafique/MovieHub" },
     image: movieHubImg,
-    category: "Frontend",
+    category: "Full Stack",
     featured: false,
   },
   {
