@@ -5,35 +5,35 @@ const skillGroups = [
   {
     title: "Programming Languages",
     icon: <Code2 className="w-5 h-5" />,
-    skills: ["Python", "C++", "JavaScript", "Dart"],
-
+    skills: ["Python", "C++", "JavaScript", "TypeScript", "Dart"],
   },
   {
     title: "Frontend",
     icon: <Layout className="w-5 h-5" />,
-    skills: ["React", "Flutter", "HTML", "CSS", "Tailwind CSS", "Bootstrap"],
-
-    
-    
+    skills: ["React", "Flutter", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "shadcn/ui"],
   },
   {
     title: "Backend & Database",
     icon: <Database className="w-5 h-5" />,
-   skills: [
-  "Django",
-  "REST API",
-  "WebSockets",
-  "SQLite",
-  "Firebase",
-  "Firebase Auth",
-  "Cloud Firestore",
-  "DRF",
-],
+    skills: [
+      "Django",
+      "Node.js",
+      "Express",
+      "REST API",
+      "WebSockets",
+      "SQLite",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Firebase",
+      "Firebase Auth",
+      "Cloud Firestore",
+      "DRF",
+    ],
   },
   {
-    title: "Tools & IDEs",
+    title: "Tools & Practices",
     icon: <Terminal className="w-5 h-5" />,
-skills: ["Git", "VS Code", "Android Studio", "PyCharm",  "Vercel", "Netlify"],
+    skills: ["Git", "VS Code", "Android Studio", "PyCharm", "Vercel", "Netlify", "Vite", "GetX", "JWT"],
   },
 ];
 
