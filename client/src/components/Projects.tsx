@@ -6,14 +6,13 @@ import talkifyImg from "@/assets/projects/talkify.png";
 import urbanAuraImg from "@/assets/projects/urban-aura.png";
 import movieHubImg from "@/assets/projects/moviehub.png";
 import weatherImg from "@/assets/projects/weather.png";
-import coffeeHavenImg from "@/assets/projects/coffee-haven.png";
 import blogWebsiteImg from "@/assets/projects/blog_site.png";
 import royalPainterImg from "@/assets/projects/royal-painter.png";
 import ispManagementImg from "@/assets/projects/isp-management.png";
 import institutionMgmtImg from "@/assets/projects/institution-mgmt.png";
 import catalogueImg from "@/assets/projects/catalogue.png";
 
-const categories = ["All", "Full Stack", "Frontend", "Mobile", "Client"];
+const categories = ["All", "Full Stack", "Frontend", "Client"];
 
 const projects = [
   {
@@ -51,15 +50,6 @@ const projects = [
     links: { github: "https://github.com/arooba-shafique/talkify" },
     image: talkifyImg,
     category: "Full Stack",
-  },
-  {
-    title: "Coffee Haven",
-    short: "Mobile — Flutter",
-    description: "Flutter and Firebase-powered coffee and snack app with MVVM architecture. Real-time product browsing, favourites, order management, and smooth onboarding.",
-    tags: ["Flutter", "Dart", "Firebase", "GetX", "MVVM"],
-    links: { github: "https://github.com/arooba-shafique/coffee-haven" },
-    image: coffeeHavenImg,
-    category: "Mobile",
   },
   {
     title: "Urban Aura",
