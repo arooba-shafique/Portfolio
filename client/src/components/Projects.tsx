@@ -102,7 +102,7 @@ const projects = [
     short: "Frontend — WooCommerce",
     description: "Product catalogue web application interfacing with a WooCommerce store to display and browse sports wear products. Features API proxy and image optimization.",
     tags: ["React", "TypeScript", "Express", "Vite"],
-    links: { github: "https://github.com/arooba-shafique/catalogue" },
+    links: { github: "https://github.com/arooba-shafique/catalogue", live: "https://catalogue-nine-brown.vercel.app/" },
     image: catalogueImg,
     category: "Frontend",
   },
