@@ -11,6 +11,7 @@ import blogWebsiteImg from "@/assets/projects/blog_site.png";
 import royalPainterImg from "@/assets/projects/royal-painter.png";
 import ispManagementImg from "@/assets/projects/isp-management.png";
 import institutionMgmtImg from "@/assets/projects/institution-mgmt.png";
+import catalogueImg from "@/assets/projects/catalogue.png";
 
 const categories = ["All", "Full Stack", "Frontend", "Mobile", "Client"];
 
@@ -94,6 +95,15 @@ const projects = [
     tags: ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
     links: { github: "https://github.com/arooba-shafique/blog_website" },
     image: blogWebsiteImg,
+    category: "Frontend",
+  },
+  {
+    title: "Catalogue",
+    short: "Frontend — WooCommerce",
+    description: "Product catalogue web application interfacing with a WooCommerce store to display and browse sports wear products. Features API proxy and image optimization.",
+    tags: ["React", "TypeScript", "Express", "Vite"],
+    links: { github: "https://github.com/arooba-shafique/catalogue" },
+    image: catalogueImg,
     category: "Frontend",
   },
 ];
