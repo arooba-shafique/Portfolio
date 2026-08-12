@@ -4,6 +4,17 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
+    role: "Full Stack Developer",
+    company: "HaadnGlobal",
+    period: "Jun 2026 - Present",
+    location: "On-site",
+    description: [
+      "Developed and maintained full-stack web applications for clients using TypeScript and modern web technologies.",
+      "Built responsive front-end interfaces and integrated back-end APIs for real-world business solutions.",
+      "Collaborated with cross-functional teams to deliver projects on time and meet client requirements."
+    ]
+  },
+  {
     role: "Full Stack Developer Intern",
     company: "Intern Intelligence",
     period: "Sept 2025 - Oct 2025",
