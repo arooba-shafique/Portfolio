@@ -10,7 +10,7 @@ const skillGroups = [
   {
     title: "Frontend",
     icon: <Layout className="w-5 h-5" />,
-    skills: ["React", "Flutter", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "shadcn/ui"],
+    skills: ["React", "Flutter", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "shadcn/ui"],
   },
   {
     title: "Backend & Database",
@@ -24,16 +24,24 @@ const skillGroups = [
       "SQLite",
       "PostgreSQL",
       "Drizzle ORM",
-      "Firebase",
-      "Firebase Auth",
-      "Cloud Firestore",
+      "Django ORM",
       "DRF",
     ],
   },
   {
-    title: "Tools & Practices",
+    title: "Authentication & APIs",
     icon: <Terminal className="w-5 h-5" />,
-    skills: ["Git", "VS Code", "Android Studio", "PyCharm", "Vercel", "Netlify", "Vite", "GetX", "JWT"],
+    skills: ["JWT", "bcrypt", "TMDB API", "OpenWeatherMap API", "WooCommerce API"],
+  },
+  {
+    title: "Tools & Deployment",
+    icon: <Terminal className="w-5 h-5" />,
+    skills: ["Git", "GitHub", "VS Code", "PyCharm", "Vercel", "Netlify", "Vite", "pnpm", "PythonAnywhere"],
+  },
+  {
+    title: "Other",
+    icon: <Code2 className="w-5 h-5" />,
+    skills: ["AI/ML", "Computer Vision", "Facial Recognition"],
   },
 ];
 
