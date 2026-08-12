@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ExternalLink, Github } from "lucide-react";
+import talkifyImg from "@/assets/projects/talkify.png";
+import urbanAuraImg from "@/assets/projects/urban-aura.png";
 import movieHubImg from "@/assets/projects/moviehub.png";
 import weatherImg from "@/assets/projects/weather.png";
 import blogWebsiteImg from "@/assets/projects/blog_site.png";
@@ -38,6 +40,24 @@ const projects = [
     tags: ["Django", "Python", "HTML", "CSS", "SQLite"],
     links: { github: "https://github.com/arooba-shafique/Project", live: "https://arooba.pythonanywhere.com/" },
     image: institutionMgmtImg,
+    category: "Full Stack",
+  },
+  {
+    title: "Talkify",
+    short: "Full Stack — WebSockets",
+    description: "Real-time chat application with Django WebSockets. One-to-one & group messaging, message editing, reactions, and unread message tracking.",
+    tags: ["Django", "WebSockets", "Tailwind CSS", "JavaScript"],
+    links: { github: "https://github.com/arooba-shafique/talkify" },
+    image: talkifyImg,
+    category: "Full Stack",
+  },
+  {
+    title: "Urban Aura",
+    short: "Full Stack — E-Commerce",
+    description: "Scalable e-commerce platform with Django backend. Product listing, categories, shopping cart, and checkout workflow with responsive Tailwind UI.",
+    tags: ["Django", "JavaScript", "SQLite", "Tailwind CSS"],
+    links: { github: "https://github.com/arooba-shafique/urban-aura-ecommerce" },
+    image: urbanAuraImg,
     category: "Full Stack",
   },
   {
