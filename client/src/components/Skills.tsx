@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Code2, Layout, Database, Terminal, Wrench, Smartphone, BarChart3 } from "lucide-react";
+import { Code2, Layout, Database, Terminal, Wrench, BarChart3 } from "lucide-react";
 
 const skillGroups = [
   {
     title: "Programming Languages",
     icon: <Code2 className="w-5 h-5" />,
-    skills: ["Python", "JavaScript", "TypeScript", "Dart", "R", "HTML5", "CSS3"],
+    skills: ["Python", "JavaScript", "TypeScript", "HTML5", "CSS3"],
   },
   {
     title: "Frontend",
@@ -17,11 +17,6 @@ const skillGroups = [
     title: "Backend",
     icon: <Database className="w-5 h-5" />,
     skills: ["Django", "DRF", "Django Channels", "Express", "Node.js", "REST API", "WebSockets"],
-  },
-  {
-    title: "Mobile & State Management",
-    icon: <Smartphone className="w-5 h-5" />,
-    skills: ["Flutter", "Firebase", "GetX", "MVVM"],
   },
   {
     title: "Database & ORM",
