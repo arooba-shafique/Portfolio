@@ -109,8 +109,16 @@ export function Projects() {
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-7xl opacity-30 pointer-events-none -z-10">
-        <div className="absolute top-10 right-10 w-96 h-96 bg-primary/10 rounded-full blur-[100px]" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[100px]" />
+        <motion.div
+          animate={{ scale: [1, 1.1, 1], x: [0, 30, 0] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-10 right-10 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"
+        />
+        <motion.div
+          animate={{ scale: [1.1, 1, 1.1], x: [0, -30, 0] }}
+          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-10 left-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[100px]"
+        />
       </div>
 
       <div className="container mx-auto px-4 md:px-6">
@@ -121,33 +129,49 @@ export function Projects() {
           variants={variants}
           className="space-y-12"
         >
-          <div className="text-center space-y-4 max-w-3xl mx-auto">
+          <motion.div
+            className="text-center space-y-4 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-3xl md:text-5xl font-display font-bold">
               Featured <span className="text-gradient">Projects</span>
             </h2>
             <p className="text-muted-foreground text-lg">
               Hover over a card to flip and reveal project details
             </p>
-          </div>
+          </motion.div>
 
-          {/* Category filters */}
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {categories.map((category) => (
+          {/* Category filters with animation */}
+          <motion.div
+            className="flex flex-wrap items-center justify-center gap-3"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            {categories.map((category, i) => (
               <motion.button
                 key={category}
                 onClick={() => setActiveCategory(category)}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 * i }}
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.95 }}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === category
                     ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
                     : "bg-secondary/50 text-muted-foreground hover:bg-secondary hover:text-foreground border border-white/5"
                 }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 {category}
               </motion.button>
             ))}
-          </div>
+          </motion.div>
 
           {/* Flip card grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -167,26 +191,33 @@ function FlipCard({ project, index }: { project: typeof projects[0]; index: numb
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      transition={{ duration: 0.5, delay: index * 0.07 }}
+      initial={{ opacity: 0, y: 40, scale: 0.9 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.8, rotateY: -10 }}
+      transition={{ duration: 0.5, delay: index * 0.07, type: "spring", stiffness: 100 }}
+      whileHover={{ y: -8 }}
       className="group perspective-1000 h-[360px]"
     >
       <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         {/* Front */}
         <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl overflow-hidden border border-white/5 bg-secondary/20">
-          <div className="h-[55%] overflow-hidden">
+          <div className="h-[55%] overflow-hidden relative">
             <img
               src={project.image}
               alt={project.title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 to-transparent" />
           </div>
           <div className="p-5 h-[45%] flex flex-col justify-center">
-            <span className="text-[11px] font-mono text-primary/80 uppercase tracking-wider mb-1">
+            <motion.span
+              className="text-[11px] font-mono text-primary/80 uppercase tracking-wider mb-1"
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.07 + 0.3 }}
+            >
               {project.category}
-            </span>
+            </motion.span>
             <h3 className="text-xl font-display font-bold mb-1">{project.title}</h3>
             <p className="text-sm text-muted-foreground">{project.short}</p>
           </div>
@@ -199,19 +230,29 @@ function FlipCard({ project, index }: { project: typeof projects[0]; index: numb
           }}
         >
           <div className="p-6 h-full flex flex-col justify-center">
-            <h3 className="text-xl font-display font-bold text-primary mb-3">{project.title}</h3>
+            <motion.h3
+              className="text-xl font-display font-bold text-primary mb-3"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
+              {project.title}
+            </motion.h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-grow">
               {project.description}
             </p>
 
             <div className="flex flex-wrap gap-1.5 mb-5">
-              {project.tags.map((tag) => (
-                <span
+              {project.tags.map((tag, i) => (
+                <motion.span
                   key={tag}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.5 + i * 0.05 }}
                   className="px-2.5 py-1 text-[10px] font-mono rounded-full bg-primary/15 text-primary border border-primary/20"
                 >
                   {tag}
-                </span>
+                </motion.span>
               ))}
             </div>
 
@@ -222,7 +263,7 @@ function FlipCard({ project, index }: { project: typeof projects[0]; index: numb
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium shadow-lg shadow-primary/20"
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(139, 92, 246, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
                   onClick={(e) => e.stopPropagation()}
                 >
