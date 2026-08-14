@@ -1,48 +1,42 @@
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Code2, Layout, Database, Terminal, Wrench, Brain } from "lucide-react";
+import { Code2, Layout, Database, Terminal, Wrench, Smartphone, BarChart3 } from "lucide-react";
 
 const skillGroups = [
   {
     title: "Programming Languages",
     icon: <Code2 className="w-5 h-5" />,
-    skills: ["Python", "C++", "JavaScript", "TypeScript", "Dart"],
+    skills: ["Python", "JavaScript", "TypeScript", "Dart", "R", "HTML5", "CSS3"],
   },
   {
     title: "Frontend",
     icon: <Layout className="w-5 h-5" />,
-    skills: ["React", "Flutter", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "shadcn/ui"],
+    skills: ["React", "Tailwind CSS", "shadcn/ui", "Bootstrap", "Vite"],
   },
   {
-    title: "Backend & Database",
+    title: "Backend",
     icon: <Database className="w-5 h-5" />,
-    skills: [
-      "Django",
-      "Node.js",
-      "Express",
-      "REST API",
-      "WebSockets",
-      "SQLite",
-      "PostgreSQL",
-      "Drizzle ORM",
-      "Django ORM",
-      "DRF",
-    ],
+    skills: ["Django", "DRF", "Django Channels", "Express", "Node.js", "REST API", "WebSockets"],
+  },
+  {
+    title: "Mobile & State Management",
+    icon: <Smartphone className="w-5 h-5" />,
+    skills: ["Flutter", "Firebase", "GetX", "MVVM"],
+  },
+  {
+    title: "Database & ORM",
+    icon: <Terminal className="w-5 h-5" />,
+    skills: ["PostgreSQL", "SQLite", "Firebase Firestore", "Drizzle ORM", "Django ORM"],
   },
   {
     title: "Authentication & APIs",
-    icon: <Terminal className="w-5 h-5" />,
-    skills: ["JWT", "bcrypt", "TMDB API", "OpenWeatherMap API", "WooCommerce API"],
+    icon: <BarChart3 className="w-5 h-5" />,
+    skills: ["JWT", "bcrypt", "Firebase Auth", "TMDB API", "OpenWeatherMap API", "WooCommerce API"],
   },
   {
     title: "Tools & Deployment",
     icon: <Wrench className="w-5 h-5" />,
-    skills: ["Git", "GitHub", "VS Code", "PyCharm", "Vercel", "Netlify", "Vite", "pnpm", "PythonAnywhere"],
-  },
-  {
-    title: "Other",
-    icon: <Brain className="w-5 h-5" />,
-    skills: ["AI/ML", "Computer Vision", "Facial Recognition"],
+    skills: ["Git", "GitHub", "VS Code", "PyCharm", "Vercel", "Netlify", "pnpm", "PythonAnywhere"],
   },
 ];
 
