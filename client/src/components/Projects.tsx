@@ -38,7 +38,7 @@ const projects = [
     short: "Full Stack — Django",
     description: "Django-based school management system with role-based dashboards for admins, teachers, students, and parents. Features secure login, academic records, and password reset.",
     tags: ["Django", "Python", "HTML", "CSS", "SQLite"],
-    links: { github: "https://github.com/arooba-shafique/Project", live: "https://arooba.pythonanywhere.com/" },
+    links: { github: "https://github.com/arooba-shafique/Project", live: "https://royalschool-mlt.vercel.app/" },
     image: institutionMgmtImg,
     category: "Full Stack",
   },
