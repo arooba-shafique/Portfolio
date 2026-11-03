@@ -29,7 +29,7 @@ const projects = [
     short: "Client — ISP System",
     description: "Full-stack ISP management system serving 200+ customers with admin and customer dashboards. Package management, subscription tracking, payment verification, and complaint handling.",
     tags: ["React", "TypeScript", "Express", "PostgreSQL", "Drizzle ORM"],
-    links: { github: "https://github.com/arooba-shafique/isp-management", live: "https://isp-management-api-server.vercel.app" },
+    links: { github: "https://github.com/arooba-shafique/isp-management", live: "https://isp-management-isp-portal.vercel.app/" },
     image: ispManagementImg,
     category: "Client",
   },
